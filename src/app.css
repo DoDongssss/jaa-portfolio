@@ -1,10 +1,52 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @import '@fontsource-variable/sora';
 
 @theme {
-  --font-sora: 'Sora Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sora: 'Sora Variable', sans-serif;
+
+  /* Brand */
+  --color-primary:        #ff4500;  /* red-orange */
+  --color-primary-soft:   #ff6a33;  /* lighter red-orange */
+  --color-primary-muted:  #ff450020; /* red-orange tint for backgrounds */
+
+  /* Light mode */
+  --color-bg:             #fafafa;
+  --color-bg-soft:        #f4f4f4;
+  --color-fg:             #111111;
+  --color-fg-muted:       #555555;
+  --color-border:         #e4e4e4;
+
+  /* Dark mode */
+  --color-bg-dark:        #0d0d0d;
+  --color-bg-soft-dark:   #161616;
+  --color-fg-dark:        #f0f0f0;
+  --color-fg-muted-dark:  #888888;
+  --color-border-dark:    #222222;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-sora);
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-fg-dark);
 }
