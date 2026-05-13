@@ -21,7 +21,7 @@
 </svelte:head>
 
 <div>
-	<main class="w-full flex flex-col items-center p-10">
+	<main class="w-full flex flex-col items-center py-6">
 		{@render children()}
 	</main>
 </div>

@@ -22,6 +22,13 @@
   --color-fg-dark:        #f0f0f0;
   --color-fg-muted-dark:  #888888;
   --color-border-dark:    #222222;
+
+
+  /* Light — casts downward like a raised surface */
+  --shadow-section: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+
+  /* Dark — glows subtly upward like an elevated surface */
+  --shadow-section-dark: 0 4px 24px -4px rgb(255 69 0 / 0.08), 0 1px 0px 0px rgb(255 255 255 / 0.04);
 }
 
 @variant dark (&:where(.dark, .dark *));
@@ -31,8 +38,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
